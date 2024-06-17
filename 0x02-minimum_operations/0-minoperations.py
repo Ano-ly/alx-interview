@@ -4,7 +4,8 @@
 
 def minOperations(n):
     """Minimum operations"""
-
+    if n <= 0:
+        return (0)
     prev = 1
     ops = 0
     clipboard = 1
