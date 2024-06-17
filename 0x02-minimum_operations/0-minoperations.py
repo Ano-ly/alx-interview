@@ -2,7 +2,9 @@
 """Minimum operations, Paste or Copy and Paste"""
 
 
-def min_ops(n):
+def minOperations(n):
+    """Minimum operations"""
+
     prev = 1
     ops = 0
     clipboard = 1
