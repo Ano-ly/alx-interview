@@ -29,7 +29,6 @@ try:
         if counter == 10:
             counter = 0
             print_vals(file_size, stats_list)
-            stats_list = []
         line = line.rstrip()
         counter += 1
         if re.fullmatch(regex, line):
