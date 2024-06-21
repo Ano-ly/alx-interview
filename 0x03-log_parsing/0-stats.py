@@ -7,7 +7,7 @@ import sys
 counter = 0
 file_size = 0
 stats_list = []
-regex = r'^([0-9]{1,3}\.){3}[0-9]{1,3} - \[[^\]]*\] "GET \/projects\/260 HTTP\/1\.1" [0-9]{3} [0-9]+$'
+regex = '^([0-9]{1,3}\.){3}[0-9]{1,3} - \[[^\]]*\] "GET \/projects\/260 HTTP\/1\.1" [0-9]{3} [0-9]+$'
 
 
 def print_vals(file_size, stats_list):
@@ -29,7 +29,6 @@ try:
         if counter == 10:
             counter = 0
             print_vals(file_size, stats_list)
-            file_size = 0
             stats_list = []
         line = line.rstrip()
         counter += 1
