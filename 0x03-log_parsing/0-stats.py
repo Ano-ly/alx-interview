@@ -7,7 +7,9 @@ import sys
 counter = 0
 file_size = 0
 stats_list = []
-regex = '^([0-9]{1,3}\.){3}[0-9]{1,3} - \[[^\]]*\] "GET \/projects\/260 HTTP\/1\.1" [0-9]{3} [0-9]+$'
+p = "GET /projects/260 HTTP/1.1"
+regex = f"^([0-9]{1,3}\.){3}[0-9]{1,3} - \[[^\]]*\] \"{p}\" [0-9]{3} [0-9]+$"
+print (regex)
 
 
 def print_vals(file_size, stats_list):
