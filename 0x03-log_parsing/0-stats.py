@@ -9,7 +9,6 @@ file_size = 0
 stats_list = []
 regex = (r"^([0-9]{1,3}\.){3}[0-9]{1,3} - \[[^\]]*\] "
          r"\"GET \/projects\/260 HTTP\/1\.1\" [0-9]{3} [0-9]+$")
-print(regex)
 
 
 def print_vals(file_size, stats_list):
