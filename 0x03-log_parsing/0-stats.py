@@ -35,6 +35,7 @@ try:
             divs = line.split()
             file_size += int(divs[8])
             stats_list.append(int(divs[7]))
+    print_vals(file_size, stats_list)
 
 except KeyboardInterrupt:
     print_vals(file_size, stats_list)
