@@ -7,7 +7,7 @@ import sys
 counter = 0
 file_size = 0
 stats_list = []
-regex = (r"^([0-9]{1,3}\.){3}[0-9]{1,3} - \[[^\]]*\] "
+regex = (r"^([0-9]{1,3}\.){3}[0-9]{1,3}( )*-( )*\[[^\]]*\] "
          r"\"GET \/projects\/260 HTTP\/1\.1\" [0-9]{3} [0-9]+$")
 
 
@@ -27,6 +27,7 @@ def print_vals(file_size, stats_list):
 
 try:
     for line in sys.stdin:
+        print(line)
         if counter == 10:
             counter = 0
             print_vals(file_size, stats_list)
@@ -34,8 +35,8 @@ try:
         counter += 1
         if re.fullmatch(regex, line):
             divs = line.split()
-            file_size += int(divs[8])
-            stats_list.append(int(divs[7]))
+            file_size += int(divs[-1])
+            stats_list.append(int(divs[-2]))
     print_vals(file_size, stats_list)
 
 except KeyboardInterrupt:
