@@ -2,7 +2,7 @@
 """makeChange function"""
 
 
-def makechange(coins, total):
+def makeChange(coins, total):
     """Get minimum number of coins required for a total"""
     if total <= 0:
         return (0)
