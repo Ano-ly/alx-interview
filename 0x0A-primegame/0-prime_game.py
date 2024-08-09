@@ -21,6 +21,8 @@ def get_prime(n):
 
 def isWinner(x, nums):
     """Determine winner of game"""
+    if not nums or x < 1:
+        return None
     ben = 0
     maria = 0
     for rnd in nums:
