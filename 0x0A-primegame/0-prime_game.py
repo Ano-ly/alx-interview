@@ -23,6 +23,9 @@ def isWinner(x, nums):
     """Determine winner of game"""
     if not nums or x < 1:
         return None
+    if x > len(nums):
+        return None
+    nums = nums[:x]
     ben = 0
     maria = 0
     for rnd in nums:
