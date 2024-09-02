@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/binpython3
 """Lockboxes are now opened"""
 
 
